@@ -1,0 +1,6 @@
+javascript:(() =>{
+var path = document.querySelector("#AppFrameMain > div > div > div:nth-child(2) > div > section > div.aYAHt > div.lnG9t > div > div:nth-child(2)");
+var rmas = path.textContent.split("\n");
+for(let i= 0;i < rmas.length; i++){
+ window.open("https://www.ifixit.com/Admin/Return/return_edit.php?returnid=" + rmas[i].slice(3))}
+ })()

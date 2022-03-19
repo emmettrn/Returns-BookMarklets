@@ -1,0 +1,13 @@
+javascript:(() =>{
+	let current_rma =window.location.href.slice(window.location.href.length-6);
+	let rmas = document.querySelector("#updateReturnForm > p:nth-child(12) > textarea").textContent.split("\n");
+	const regex = /\d\d\d\d\d\d/;
+
+	for (let index = 0; index < rmas.length; index++) {
+    	rmas[index] = rmas[index].slice(1,7);
+    
+     	if(regex.exec(rmas[index]) && current_rma !== rmas[index]){
+         window.open("https://www.ifixit.com/Admin/Return/return_edit.php?returnid="+(rmas[index]));
+     	}
+	}
+ })()

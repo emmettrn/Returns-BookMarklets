@@ -1,0 +1,8 @@
+javascript:(()=>{
+	const domain = window.location.host.split('.')[0] == 'ifixit-test' ? %27www.cominor.com%27 : %27www.ifixit.com%27;
+	const parts=window.location.pathname.split(%27/%27);
+	const type=parts[parts.length-2];
+	const id=parts[parts.length-1];
+	const url=`https://${domain}/Admin/Return/return_input.php?orderid=${id}`;
+	window.location = url;
+ })()
