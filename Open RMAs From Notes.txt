@@ -1,6 +1,7 @@
 javascript:(() =>{
 	let current_rma =window.location.href.slice(window.location.href.length-6);
-	let rmas = document.querySelector("#updateReturnForm > p:nth-child(15) > textarea").textContent.split("\n");
+	let tracking = document.querySelector("#updateReturnForm > p:nth-child(11)").textContent.indexOf("None");
+	let rmas = tracking =! -1 ? document.querySelector("#updateReturnForm > p:nth-child(13) > textarea").textContent.split(/\r?\n/) : document.querySelector("#updateReturnForm > p:nth-child(14) > textarea").textContent.split(/\r?\n/);
 	const regex = /\d\d\d\d\d\d/;
 
 	for (let index = 0; index < rmas.length; index++) {
